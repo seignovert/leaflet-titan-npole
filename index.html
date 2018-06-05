@@ -27,9 +27,12 @@
     }
   );
 
+  var tileLocation = 'https://media.githubusercontent.com/media/seignovert/leaflet-titan-npole/master/tiles/radar_npole/{z}/{x}/{y}.png';
+  //var tileLocation = 'tiles/radar_npole/{z}/{x}/{y}.png'; // Local dev
+
   var map = new L.Map('map', {
     crs: crs,
-    layers: L.tileLayer('tiles/radar_npole/{z}/{x}/{y}.png', {
+    layers: L.tileLayer(tileLocation, {
       minZoom: 1,
       maxZoom: 4,
       noWrap: true,
